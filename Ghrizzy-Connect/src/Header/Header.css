@@ -1,0 +1,152 @@
+.Logo-div {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  color: white;
+  height: 80px;
+}
+.desktop-Logo-div {
+  display: none;
+}
+.logo {
+  width: 150px;
+  padding: 10px;
+   cursor: pointer;
+}
+.Logo-div input {
+  height: 30px;
+  width: 90%;
+  border-radius: 14px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  backdrop-filter: blur(3px);
+  filter: drop-shadow(0 0 2em red);
+  padding-left: 10px;
+  font-size: 15px;
+  position: relative;
+  outline-color: red;
+}
+.Logo-div input::placeholder {
+  color: white;
+  padding-left: 0px;
+  font-size: 10px;
+}
+.search {
+  position: absolute;
+  color: white;
+  right: 14%;
+  top: 2rem;
+}
+.menu {
+  padding: 10px;
+   cursor: pointer;
+}
+.nav-links {
+  width: 100%;
+  position: absolute;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  animation: slidein 2s;
+  z-index: 5;
+}
+.nav-links li,
+a {
+  line-height: 50px;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.nav-links a:hover {
+  color: red;
+  cursor: pointer;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .Logo-div {
+    display: none;
+  }
+  .desktop-Logo-div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    background-color: black;
+    height: 90px;
+  }
+  .desktop-Logo-div ul,
+  li,
+  a {
+    display: flex;
+    list-style: none;
+    padding: 3px;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: white;
+  }
+  .desktop-Logo-div a:hover {
+    color: red;
+  }
+  
+  .desktop-Logo-div input {
+  height: 30px;
+  width: 70%;
+  border-radius: 14px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  backdrop-filter: blur(3px);
+  filter: drop-shadow(0 0 2em red);
+  padding-left: 10px;
+  font-size: 15px;
+  position: relative;
+  outline-color: red;
+}
+.desktop-Logo-div input::placeholder {
+  color: white;
+  padding-left: 0px;
+  font-size: 10px;
+}
+.search {
+  position: absolute;
+  color: white;
+  left: 40%;
+  top: 2.3rem;
+}
+}
+@media screen and (min-width: 1024px) {
+  .desktop-Logo-div{
+    justify-content: space-between;
+    width: 100%;
+  }
+  .desktop-Logo-div input {
+  height: 30px;
+  width:100%;
+ 
+}
+.search {
+  position: absolute;
+  color: white;
+  left: 48%;
+  top: 2.3rem;
+}
+}

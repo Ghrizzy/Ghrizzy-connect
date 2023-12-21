@@ -1,0 +1,226 @@
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  background-color: black;
+  z-index: 0;
+}
+.carousel-image {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  opacity: 1;
+  z-index: 10;
+  transition: 0.5s ease-in-out;
+}
+.tablet-carousel-image {
+  display: none;
+}
+
+.desktop-carousel-image {
+  display: none;
+}
+.carousel-image .image-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.carousel-image .image-div img {
+  width: 90%;
+  height: 300px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin: 0;
+  object-fit: cover;
+}
+.carousel-image .event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 100%;
+  /* margin: 20px; */
+}
+.event-info-container {
+  background-color: white;
+  margin: 0 5%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  line-height: 30px;
+  font-size: 15px;
+  padding: 10px 40px;
+}
+/* .carousel-image.active {
+  z-index: 1;
+  opacity: ;
+} */
+
+.carousel-button-prev {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel-button-next {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+.add-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  padding-top: 0;
+}
+.date {
+  position: absolute;
+  background-color: red;
+  top: 16rem;
+  right: 2rem;
+  color: white;
+  padding: 20px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.event-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: red;
+}
+.event-location {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 10px;
+}
+.event-price {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 10px;
+}
+.event-info button {
+  width: 100px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid red;
+  padding: 10px;
+  margin: 10px 0;
+  color: black;
+  z-index: 100;
+}
+.event-info button:hover {
+  background-color: red;
+  color: white;
+  transition: 0.8s ease-in-out;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .carousel-image {
+    display: none;
+    
+  }
+  .tablet-carousel-image {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+  }
+  .desktop-carousel-image {
+    display: none;
+  }
+  .tablet-carousel-image .image-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.tablet-carousel-image .image-div img {
+  width: 90%;
+  height: 300px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin: 0;
+  object-fit: cover;
+}
+.tablet-carousel-image .event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 100%;
+  /* margin: 20px; */
+}
+}
+@media screen and (min-width: 1024px) {
+  .carousel-image {
+    display: none;
+    
+  }
+  .tablet-carousel-image {
+    display: none;
+  }
+  .desktop-carousel-image {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+  }
+  .desktop-carousel-image .image-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.desktop-carousel-image .image-div img {
+  width: 90%;
+  height: 300px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin: 0;
+  object-fit: cover;
+}
+.desktop-carousel-image .event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 100%;
+  /* margin: 20px; */
+}
+}
